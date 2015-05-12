@@ -1,0 +1,41 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+        maven { url 'http://clojars.org/repo' }
+    }
+    dependencies {
+        classpath 'org.robovm:robovm-gradle-plugin:1.2.0'
+        classpath 'clojuresque:clojuresque-base:1.6.0'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'robovm'
+apply plugin: 'clojure-min'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven { url 'http://clojars.org/repo' }
+}
+
+ext {
+    // Configure your application main class
+    mainClassName = "hello.Main"
+    roboVMVersion = "1.2.0"
+}
+
+robovm {
+}
+
+clojure {
+    clojure.warnOnReflection = true
+    clojure.aotCompile = true
+}
+
+dependencies {
+    compile "org.clojure:clojure:1.7.0-beta1"
+    compile "org.robovm:robovm-rt:${roboVMVersion}"
+    compile "org.robovm:robovm-cocoatouch:${roboVMVersion}"
+}

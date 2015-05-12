@@ -1,0 +1,6 @@
+<config>
+  <forceLinkClasses>
+    <pattern>clojure.**</pattern>
+    <pattern>hello.**</pattern>
+  </forceLinkClasses>
+</config>
