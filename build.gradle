@@ -39,3 +39,7 @@ dependencies {
     compile "org.robovm:robovm-rt:${roboVMVersion}"
     compile "org.robovm:robovm-cocoatouch:${roboVMVersion}"
 }
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "2.2"
+}
