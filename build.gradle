@@ -5,7 +5,7 @@ buildscript {
         maven { url 'http://clojars.org/repo' }
     }
     dependencies {
-        classpath 'org.robovm:robovm-gradle-plugin:1.2.0'
+        classpath 'org.robovm:robovm-gradle-plugin:1.3.0'
         classpath 'clojuresque:clojuresque-base:1.6.0'
     }
 }
@@ -23,7 +23,7 @@ repositories {
 ext {
     // Configure your application main class
     mainClassName = "hello.Main"
-    roboVMVersion = "1.2.0"
+    roboVMVersion = "1.3.0"
 }
 
 robovm {
